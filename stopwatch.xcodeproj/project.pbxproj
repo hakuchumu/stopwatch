@@ -13,6 +13,7 @@
 		8FBF042924AE96DF00BBB271 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBF042724AE96DF00BBB271 /* Main.storyboard */; };
 		8FBF042B24AE96E100BBB271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBF042A24AE96E100BBB271 /* Assets.xcassets */; };
 		8FBF042E24AE96E100BBB271 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBF042C24AE96E100BBB271 /* LaunchScreen.storyboard */; };
+		8FBF045624B04B0800BBB271 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBF045524B04B0800BBB271 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8FBF042A24AE96E100BBB271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FBF042D24AE96E100BBB271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FBF042F24AE96E100BBB271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FBF045524B04B0800BBB271 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		8FBF041524AE96DF00BBB271 = {
 			isa = PBXGroup;
 			children = (
+				8FBF045524B04B0800BBB271 /* Default-568h@2x.png */,
 				8FBF042024AE96DF00BBB271 /* stopwatch */,
 				8FBF041F24AE96DF00BBB271 /* Products */,
 			);
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FBF042E24AE96E100BBB271 /* LaunchScreen.storyboard in Resources */,
+				8FBF045624B04B0800BBB271 /* Default-568h@2x.png in Resources */,
 				8FBF042B24AE96E100BBB271 /* Assets.xcassets in Resources */,
 				8FBF042924AE96DF00BBB271 /* Main.storyboard in Resources */,
 			);
@@ -286,7 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVQKLKLNZM;
-				INFOPLIST_FILE = stopqwatch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/stopwatch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVQKLKLNZM;
-				INFOPLIST_FILE = stopqwatch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/stopwatch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
