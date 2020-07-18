@@ -22,9 +22,9 @@ class ViewController: UIViewController {
         
         //ラベルと画面全体の背景色設定
         self.view.backgroundColor = #colorLiteral(red: 0.2128436267, green: 0.646464169, blue: 0.6198984981, alpha: 1)
-        timerMinute.backgroundColor = .white
-        timerSecond.backgroundColor = .white
-        timerMsec.backgroundColor = .white
+        timerMinute.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        timerSecond.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        timerMsec.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
    }
 
     @IBAction func startTimer(_ sender: Any) {
