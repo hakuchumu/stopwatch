@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="stopqwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="stopwatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,47 +20,36 @@
                                 <color key="backgroundColor" red="0.34467655330000002" green="0.63761104059999996" blue="0.61765742769999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8dZ-vP-nLz">
-                                <rect key="frame" x="57" y="288" width="300" height="80"/>
+                                <rect key="frame" x="67" y="288" width="280" height="125"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3w-HH-N0n">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="5vD-yY-W4D"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="VeJ-jD-oBB"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="qRX-G6-7Is"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="VeJ-jD-oBB"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="qRX-G6-7Is"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjD-Oi-0P5">
-                                        <rect key="frame" x="110" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="155" y="0.0" width="125" height="125"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="1QH-f8-iVp"/>
-                                            <constraint firstAttribute="width" constant="80" id="z2c-tL-Xhf"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="1QH-f8-iVp"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="z2c-tL-Xhf"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0It-zA-frF">
-                                        <rect key="frame" x="220" y="0.0" width="80" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="TDY-TO-SgA"/>
-                                            <constraint firstAttribute="height" constant="80" id="ooY-oF-pgm"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dxC-fF-QCl">
-                                <rect key="frame" x="136" y="418" width="142" height="48"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="dxC-fF-QCl">
+                                <rect key="frame" x="106.5" y="463" width="201" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijy-mJ-kjq">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="48"/>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="62"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="35"/>
                                         <state key="normal" title="Start">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -69,8 +58,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyp-Bb-iz8">
-                                        <rect key="frame" x="90" y="0.0" width="52" height="48"/>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                        <rect key="frame" x="129" y="0.0" width="72" height="62"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="35"/>
                                         <state key="normal" title="Stop">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -96,7 +85,6 @@
                     </view>
                     <connections>
                         <outlet property="timerMinute" destination="U3w-HH-N0n" id="SF1-f0-i44"/>
-                        <outlet property="timerMsec" destination="0It-zA-frF" id="qKb-hl-R6b"/>
                         <outlet property="timerSecond" destination="HjD-Oi-0P5" id="dxs-iq-ZqI"/>
                     </connections>
                 </viewController>
