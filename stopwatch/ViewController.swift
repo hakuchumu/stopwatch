@@ -37,7 +37,6 @@ class ViewController: UIViewController {
         if startOrStopButton.titleLabel?.text == "Start" {
             
              if timer != nil{
-                
                 timer.invalidate()
              } else {
                 startTime = Date();
@@ -71,6 +70,7 @@ class ViewController: UIViewController {
             else {
                 startTime = Date();
             }
+            
             timer = Timer.scheduledTimer(
                 timeInterval: 0.01,
                 target: self,
@@ -83,24 +83,25 @@ class ViewController: UIViewController {
     }
        
     @IBAction func resetButton(_ sender: Any) {
-        timer.invalidate()
+        if timer != nil {
+            timer.invalidate()
+        }
         startTime = Date();
         totalTime = 0.0
         displayTime(totalTime)
         startOrStopButton.setTitle("Start", for: .normal)
     }
        
-     @objc func timerCounter() {
-         let currentTime = totalTime + Date().timeIntervalSince(startTime)
-         displayTime(currentTime)
-     }
+    @objc func timerCounter() {
+        let currentTime = totalTime + Date().timeIntervalSince(startTime)
+        displayTime(currentTime)
+    }
     
-     func displayTime(_ time: TimeInterval) {
-         let minute = (Int)(fmod((time/60), 60))
-         let second = (Int)(fmod(time, 60))
-    
-         timerMinute.text = String(format:"%02d", minute)
-         timerSecond.text = String(format:"%02d", second)
-     }
-    
+    func displayTime(_ time: TimeInterval) {
+        let minute = (Int)(fmod((time/60), 60))
+        let second = (Int)(fmod(time, 60))
+
+        timerMinute.text = String(format:"%02d", minute)
+        timerSecond.text = String(format:"%02d", second)
+    }
 }

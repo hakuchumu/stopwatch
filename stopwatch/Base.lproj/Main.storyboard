@@ -16,11 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onJ-Rz-ucu">
-                                <rect key="frame" x="0.0" y="44" width="414" height="224"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="89.5"/>
                                 <color key="backgroundColor" red="0.34467655330000002" green="0.63761104059999996" blue="0.61765742769999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTU-nO-Gol">
+                                <rect key="frame" x="72.5" y="298.5" width="269" height="89.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8dZ-vP-nLz">
-                                <rect key="frame" x="67" y="288" width="280" height="125"/>
+                                <rect key="frame" x="67" y="153.5" width="280" height="125"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3w-HH-N0n">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
@@ -45,7 +50,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="dxC-fF-QCl">
-                                <rect key="frame" x="97.5" y="463" width="219" height="62"/>
+                                <rect key="frame" x="97.5" y="408" width="219" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijy-mJ-kjq">
                                         <rect key="frame" x="0.0" y="0.0" width="84" height="62"/>
@@ -74,10 +79,14 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="onJ-Rz-ucu" secondAttribute="trailing" id="6Fu-rc-qMt"/>
                             <constraint firstItem="dxC-fF-QCl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Avg-L2-rbs"/>
-                            <constraint firstItem="onJ-Rz-ucu" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="Cju-1n-tQT"/>
+                            <constraint firstItem="onJ-Rz-ucu" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="Cju-1n-tQT"/>
                             <constraint firstItem="onJ-Rz-ucu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DoV-pw-Nj8"/>
+                            <constraint firstItem="dxC-fF-QCl" firstAttribute="top" secondItem="oTU-nO-Gol" secondAttribute="bottom" constant="20" id="G90-pY-dRS"/>
+                            <constraint firstItem="oTU-nO-Gol" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KKY-5B-bLZ"/>
+                            <constraint firstItem="oTU-nO-Gol" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.65" id="PIf-dI-Nzv"/>
+                            <constraint firstItem="oTU-nO-Gol" firstAttribute="top" secondItem="8dZ-vP-nLz" secondAttribute="bottom" constant="20" id="QEq-LR-EUH"/>
+                            <constraint firstItem="oTU-nO-Gol" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="asP-cA-DTb"/>
                             <constraint firstItem="8dZ-vP-nLz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bra-X0-88b"/>
-                            <constraint firstItem="dxC-fF-QCl" firstAttribute="top" secondItem="8dZ-vP-nLz" secondAttribute="bottom" constant="50" id="fui-gy-h2c"/>
                             <constraint firstItem="8dZ-vP-nLz" firstAttribute="top" secondItem="onJ-Rz-ucu" secondAttribute="bottom" constant="20" id="jTZ-8v-Ldc"/>
                             <constraint firstItem="onJ-Rz-ucu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n4w-iM-lly"/>
                         </constraints>
