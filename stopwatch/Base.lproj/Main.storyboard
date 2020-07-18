@@ -93,6 +93,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="deliName" destination="oTU-nO-Gol" id="2Ck-7g-e5F"/>
                         <outlet property="startOrStopButton" destination="Ijy-mJ-kjq" id="2Wr-at-AAC"/>
                         <outlet property="timerMinute" destination="U3w-HH-N0n" id="SF1-f0-i44"/>
                         <outlet property="timerSecond" destination="HjD-Oi-0P5" id="dxs-iq-ZqI"/>

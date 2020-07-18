@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startOrStopButton: UIButton!
     
+    @IBOutlet weak var deliName: UITextField!
+    
     weak var timer: Timer!
     var startTime = Date()
     var totalTime = 0.0
@@ -104,4 +106,23 @@ class ViewController: UIViewController {
         timerMinute.text = String(format:"%02d", minute)
         timerSecond.text = String(format:"%02d", second)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }
+    
+//    extension ViewController: UITextFieldDelegate {
+//
+//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//            // キーボードを閉じる
+//            textField.resignFirstResponder()
+//            deliName.text = textField.text
+//            return true
+//        }
+// }
+
+
+    
+
