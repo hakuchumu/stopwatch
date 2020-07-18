@@ -45,7 +45,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="dxC-fF-QCl">
-                                <rect key="frame" x="106.5" y="463" width="201" height="62"/>
+                                <rect key="frame" x="97.5" y="463" width="219" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijy-mJ-kjq">
                                         <rect key="frame" x="0.0" y="0.0" width="84" height="62"/>
@@ -54,17 +54,17 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tbr-jO-9PZ"/>
+                                            <action selector="startOrStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dob-EW-FPv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyp-Bb-iz8">
-                                        <rect key="frame" x="129" y="0.0" width="72" height="62"/>
+                                        <rect key="frame" x="129" y="0.0" width="90" height="62"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="35"/>
-                                        <state key="normal" title="Stop">
+                                        <state key="normal" title="Reset">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cBH-p2-mjU"/>
+                                            <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nQB-tN-fAR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -84,6 +84,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="startOrStopButton" destination="Ijy-mJ-kjq" id="2Wr-at-AAC"/>
                         <outlet property="timerMinute" destination="U3w-HH-N0n" id="SF1-f0-i44"/>
                         <outlet property="timerSecond" destination="HjD-Oi-0P5" id="dxs-iq-ZqI"/>
                     </connections>
