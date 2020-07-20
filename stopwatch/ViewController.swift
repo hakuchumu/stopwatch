@@ -12,74 +12,117 @@ class ViewController: UIViewController {
        
     @IBOutlet weak var timerMinute: UILabel!
     @IBOutlet weak var timerSecond: UILabel!
-    @IBOutlet weak var timerMsec: UILabel!
+    
+    @IBOutlet weak var startOrStopButton: UIButton!
+    
+    @IBOutlet weak var deliName: UITextField!
     
     weak var timer: Timer!
     var startTime = Date()
+    var totalTime = 0.0
        
     override func viewDidLoad() {
        super.viewDidLoad()
-        
         //ラベルと画面全体の背景色設定
         self.view.backgroundColor = #colorLiteral(red: 0.2128436267, green: 0.646464169, blue: 0.6198984981, alpha: 1)
-        timerMinute.backgroundColor = .white
-        timerSecond.backgroundColor = .white
-        timerMsec.backgroundColor = .white
-   }
+        timerMinute.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        timerSecond.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        timer.invalidate()
+    }
 
-    @IBAction func startTimer(_ sender: Any) {
-        // timerが起動中なら一旦破棄する
-        if timer != nil{
-            timer.invalidate()
+    @IBAction func startOrStopButton(_ sender: Any) {
+         
+        if startOrStopButton.titleLabel?.text == "Start" {
+            
+             if timer != nil{
+                timer.invalidate()
+             } else {
+                startTime = Date();
+             }
+             
+             timer = Timer.scheduledTimer(
+                 timeInterval: 1,
+                 target: self,
+                 selector: #selector(self.timerCounter),
+                 userInfo: nil,
+                 repeats: true)
+            
+            startOrStopButton.setTitle("Stop", for: .normal)
+            
+        } else if startOrStopButton.titleLabel?.text == "Stop" {
+            
+             if timer != nil {
+                 totalTime += Date().timeIntervalSince(startTime)
+                 timer.invalidate()
+                 timer = nil
+             }
+             displayTime(totalTime)
+            
+            startOrStopButton.setTitle("Restart", for: .normal)
+            
+        } else if startOrStopButton.titleLabel?.text == "Restart" {
+            
+            if timer != nil {
+                timer.invalidate()
+            }
+            else {
+                startTime = Date();
+            }
+            
+            timer = Timer.scheduledTimer(
+                timeInterval: 0.01,
+                target: self,
+                selector: #selector(self.timerCounter),
+                userInfo: nil,
+                repeats: true)
+            
+            startOrStopButton.setTitle("Stop", for: .normal)
         }
-        
-        timer = Timer.scheduledTimer(
-            timeInterval: 0.01,
-            target: self,
-            selector: #selector(self.timerCounter),
-            userInfo: nil,
-            repeats: true)
-       
-       startTime = Date()
     }
        
-    @IBAction func stopTimer(_ sender: Any) {
-        
-        if timer != nil{
+    @IBAction func resetButton(_ sender: Any) {
+        if timer != nil {
             timer.invalidate()
-
-            timerMinute.text = "00"
-            timerSecond.text = "00"
-            timerMsec.text = "00"
         }
+        startTime = Date();
+        totalTime = 0.0
+        displayTime(totalTime)
+        startOrStopButton.setTitle("Start", for: .normal)
     }
        
     @objc func timerCounter() {
-           // タイマー開始からのインターバル時間
-           let currentTime = Date().timeIntervalSince(startTime)
-           // fmod() 余りを計算
-           let minute = (Int)(fmod((currentTime/60), 60))
-           // currentTime/60 の余り
-           let second = (Int)(fmod(currentTime, 60))
-           // floor 切り捨て、小数点以下を取り出して *100
-           let msec = (Int)((currentTime - floor(currentTime))*100)
-           
-           // %02d： ２桁表示、0で埋める
-           let sMinute = String(format:"%02d", minute)
-           let sSecond = String(format:"%02d", second)
-           let sMsec = String(format:"%02d", msec)
-           
-           timerMinute.text = sMinute
-           timerSecond.text = sSecond
-           timerMsec.text = sMsec
-        
+        let currentTime = totalTime + Date().timeIntervalSince(startTime)
+        displayTime(currentTime)
     }
-       
-       override func viewWillDisappear(_ animated: Bool) {
-           super.viewWillDisappear(true)
-           timer.invalidate()
+    
+    func displayTime(_ time: TimeInterval) {
+        let minute = (Int)(fmod((time/60), 60))
+        let second = (Int)(fmod(time, 60))
+
+        timerMinute.text = String(format:"%02d", minute)
+        timerSecond.text = String(format:"%02d", second)
     }
-
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }
+    
+//    extension ViewController: UITextFieldDelegate {
+//
+//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//            // キーボードを閉じる
+//            textField.resignFirstResponder()
+//            deliName.text = textField.text
+//            return true
+//        }
+// }
+
+
+    
 
