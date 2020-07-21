@@ -27,6 +27,8 @@ class ViewController: UIViewController {
         self.view.backgroundColor = #colorLiteral(red: 0.2128436267, green: 0.646464169, blue: 0.6198984981, alpha: 1)
         timerMinute.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         timerSecond.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        deliName.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -113,15 +115,15 @@ class ViewController: UIViewController {
     
 }
     
-//    extension ViewController: UITextFieldDelegate {
-//
-//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//            // キーボードを閉じる
-//            textField.resignFirstResponder()
-//            deliName.text = textField.text
-//            return true
-//        }
-// }
+    extension ViewController: UITextFieldDelegate {
+
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            // キーボードを閉じる
+            textField.resignFirstResponder()
+            deliName.text = textField.text
+            return true
+        }
+ }
 
 
     
