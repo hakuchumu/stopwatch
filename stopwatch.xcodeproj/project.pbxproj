@@ -14,6 +14,7 @@
 		8FBF042B24AE96E100BBB271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBF042A24AE96E100BBB271 /* Assets.xcassets */; };
 		8FBF042E24AE96E100BBB271 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBF042C24AE96E100BBB271 /* LaunchScreen.storyboard */; };
 		8FBF045624B04B0800BBB271 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBF045524B04B0800BBB271 /* Default-568h@2x.png */; };
+		8FE177CB24D6646D00216F71 /* StateToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE177CA24D6646D00216F71 /* StateToggleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8FBF042D24AE96E100BBB271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FBF042F24AE96E100BBB271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FBF045524B04B0800BBB271 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8FE177CA24D6646D00216F71 /* StateToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateToggleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				8FBF042124AE96DF00BBB271 /* AppDelegate.swift */,
 				8FBF042324AE96DF00BBB271 /* SceneDelegate.swift */,
 				8FBF042524AE96DF00BBB271 /* ViewController.swift */,
+				8FE177CA24D6646D00216F71 /* StateToggleButton.swift */,
 				8FBF042724AE96DF00BBB271 /* Main.storyboard */,
 				8FBF042A24AE96E100BBB271 /* Assets.xcassets */,
 				8FBF042C24AE96E100BBB271 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FBF042624AE96DF00BBB271 /* ViewController.swift in Sources */,
+				8FE177CB24D6646D00216F71 /* StateToggleButton.swift in Sources */,
 				8FBF042224AE96DF00BBB271 /* AppDelegate.swift in Sources */,
 				8FBF042424AE96DF00BBB271 /* SceneDelegate.swift in Sources */,
 			);

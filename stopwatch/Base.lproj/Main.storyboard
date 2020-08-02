@@ -59,7 +59,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="startOrStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dob-EW-FPv"/>
+                                            <action selector="StateToggleButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQO-ra-Vtn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyp-Bb-iz8">
