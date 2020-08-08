@@ -14,6 +14,8 @@ import UIKit
  パッとみた時にprivateなどがついていることによって外部から内部でしか使わない関数なんだなとかがわかるようになる。
  */
 
+//これで大丈夫なのか？
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var timerMinute: UILabel!
