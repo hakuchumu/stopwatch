@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     private var timer: Timer?
     
     private var startTime = Date()
-    private var totalTime = 0.0
+    private var totalTime = 0.1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     private func startTimer() {
         startTime = Date()
         timer = Timer.scheduledTimer(
-            timeInterval: 0.01,
+            timeInterval: 1,
             target: self,
             selector: #selector(self.timerCounter),
             userInfo: nil,
@@ -118,7 +118,3 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
-
-
-
-
