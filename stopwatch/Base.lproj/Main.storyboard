@@ -20,7 +20,7 @@
                                 <color key="backgroundColor" red="0.34467655330000002" green="0.63761104059999996" blue="0.61765742769999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTU-nO-Gol">
-                                <rect key="frame" x="72.5" y="298.5" width="269" height="89.5"/>
+                                <rect key="frame" x="67" y="298.5" width="280" height="89.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -77,13 +77,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.34467655327853008" green="0.63761104060913709" blue="0.61765742770440957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="oTU-nO-Gol" firstAttribute="width" secondItem="8dZ-vP-nLz" secondAttribute="width" id="67T-Nb-ltI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="onJ-Rz-ucu" secondAttribute="trailing" id="6Fu-rc-qMt"/>
                             <constraint firstItem="dxC-fF-QCl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Avg-L2-rbs"/>
                             <constraint firstItem="onJ-Rz-ucu" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="Cju-1n-tQT"/>
                             <constraint firstItem="onJ-Rz-ucu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DoV-pw-Nj8"/>
                             <constraint firstItem="dxC-fF-QCl" firstAttribute="top" secondItem="oTU-nO-Gol" secondAttribute="bottom" constant="20" id="G90-pY-dRS"/>
                             <constraint firstItem="oTU-nO-Gol" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KKY-5B-bLZ"/>
-                            <constraint firstItem="oTU-nO-Gol" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.65" id="PIf-dI-Nzv"/>
                             <constraint firstItem="oTU-nO-Gol" firstAttribute="top" secondItem="8dZ-vP-nLz" secondAttribute="bottom" constant="20" id="QEq-LR-EUH"/>
                             <constraint firstItem="oTU-nO-Gol" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="asP-cA-DTb"/>
                             <constraint firstItem="8dZ-vP-nLz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bra-X0-88b"/>

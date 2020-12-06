@@ -14,8 +14,6 @@ import UIKit
  パッとみた時にprivateなどがついていることによって外部から内部でしか使わない関数なんだなとかがわかるようになる。
  */
 
-//これで大丈夫なのか？
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var timerMinute: UILabel!
@@ -83,7 +81,7 @@ class ViewController: UIViewController {
         let currentTime = totalTime + Date().timeIntervalSince(startTime)
         displayTime(currentTime)
     }
-
+    
     
     @IBAction func StateToggleButtonDidTapped(_ sender: StateToggleButton) {
         
@@ -92,7 +90,7 @@ class ViewController: UIViewController {
         case .start, .reStart:
             //StartおよびreStartの時はTimerはnilで実行されていないので分岐は必要がなくなる。
             startTimer()
-
+            
         case .stop:
             //Stop押す時には絶対にTimerは動いているはずなのでnilじゃなかったらの分岐はいらない。
             totalTime += Date().timeIntervalSince(startTime)
