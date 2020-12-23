@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerMinute: UILabel!
     @IBOutlet weak var timerSecond: UILabel!
     @IBOutlet weak var deliName: UITextField!
+    @IBAction func addButton(_ sender: Any) {
+        //ボタン押下時に文字列が存在しない場合を考えてコード足す
+        print(deliName.text)
+    }
     
     //カスタムボタンを適用
     @IBOutlet weak var startOrStopButton: StateToggleButton!
