@@ -20,8 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerSecond: UILabel!
     @IBOutlet weak var deliName: UITextField!
     @IBAction func addButton(_ sender: Any) {
-        //ボタン押下時に文字列が存在しない場合を考えてコード足す
-        print(deliName.text)
+        //UserDefaultで一緒に連れて行く
+        if let title = deliName.text {
+            UserDefaults.standard.set(totalTime, forKey: title)
+        }
     }
     
     //カスタムボタンを適用
